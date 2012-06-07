@@ -1,0 +1,16 @@
+Intro:
+======
+A map-reduce framework written in ruby.
+
+The motivation was to use fast network IO lib called EventMachice for map-reduce just as a POC.
+
+Have Mappers and Reducers scheduled work packets, an intermedeate merge is hidden and resides with the scheduler.
+
+TODO:
+====
+Scheduler can be a reducer.
+Merge can also be a reducer.
+Have multiple fault-tolerent scheduler/mergers.
+Use a distributed cache to hold intermediate work packets.
+
+https://github.com/bucketsize/evmr
