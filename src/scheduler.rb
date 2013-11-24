@@ -1,5 +1,5 @@
 require 'eventmachine'
-require './ds_helper.rb'
+require 'src/ds_helper.rb'
 
 MNODES = [
   ['localhost', 5550],
@@ -103,7 +103,7 @@ class Scheduler < EM::Connection
     if @@jobs == 0 and @@ids.empty? and @@rds.size == 1
       puts "== convergence =="
       p @@rds
-      File.open('result.txt', 'w') do |f|
+      File.open('data/result.txt', 'w') do |f|
          f.write(Ds::read(@@rds.first).sort)
       end
       EM.stop
@@ -126,7 +126,7 @@ end
 
 if __FILE__ == $0
   EM.run do
-    Scheduler.ds 'a.en.txt', 'b.en.txt', 'c.en.txt', 'd.en.txt', 'e.en.txt'
+    Scheduler.ds 'data/a.en.txt', 'data/b.en.txt', 'data/c.en.txt', 'data/d.en.txt', 'data/e.en.txt'
     Scheduler.start
   end
 end

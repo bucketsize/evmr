@@ -27,7 +27,7 @@ module Ds
     end
     private 
     def ufname
-      "ds-#{Time.now.strftime("%d%m%Y")}-#{Random.rand}.ds"
+      "data/tmp/ds-#{Time.now.strftime("%d%m%Y")}-#{Random.rand}.ds"
     end
   end
 end

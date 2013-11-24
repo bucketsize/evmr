@@ -1,6 +1,6 @@
 require 'eventmachine'
 require 'pp'
-require './ds_helper.rb'
+require 'src/ds_helper.rb'
 
 module Mapper
   def receive_data(data)

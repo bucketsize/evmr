@@ -1,8 +1,8 @@
 require 'rubygems'
 require 'daemons'
 require 'eventmachine'
-require './mapper'
-require './reducer'
+require 'src/mapper.rb'
+require 'src/reducer.rb'
 
 EM.run do
   puts 'mappers'
